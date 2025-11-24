@@ -1,0 +1,12 @@
+.layout-container {
+  display: flex;
+  flex-direction: column; /* Apila elementos verticalmente */
+  height: 100vh;          /* Ocupa el 100% de la altura de la pantalla */
+  overflow: hidden;       /* Evita scroll doble */
+}
+
+.content-area {
+  flex: 1;                /* Ocupa TODO el espacio sobrante */
+  overflow-y: auto;       /* Permite scroll solo en el contenido si es muy largo */
+  padding: 10px;
+}

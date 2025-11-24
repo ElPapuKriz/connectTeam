@@ -1,0 +1,56 @@
+:root{
+    --var-width-home:250px;
+    --var-height-home:180px;
+}
+
+h4{
+    text-align: center;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin:20px;
+
+}
+
+.content-home{
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 20px;
+    
+}
+.content-home:hover{
+    scale: 1.1;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+
+#comunicados_oficiales {
+    background: #e76060;
+    width: var(--var-width-home);
+    height: var(--var-height-home);
+}
+
+#notas_instantaneas {
+    background: #8ed665;
+    width: var(--var-width-home);
+    height: var(--var-height-home);
+    
+}
+
+#chat_area {
+    background: #514fd8;
+    width: var(--var-width-home);
+    height: var(--var-height-home);
+    
+}
+
+#tareas_recordatorios {
+    background: #60e7dc;
+    width: var(--var-width-home);
+    height: var(--var-height-home);
+    
+}
