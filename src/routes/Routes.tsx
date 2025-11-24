@@ -3,7 +3,7 @@ import { BrowserRouter,Routes,Route } from "react-router"
 
 
 
-export const Routes = () => {
+export const Rutas = () => {
   return (
     <BrowserRouter>
         
