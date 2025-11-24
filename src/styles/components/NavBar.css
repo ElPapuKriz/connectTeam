@@ -1,0 +1,30 @@
+.navbar {
+
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid rgba(0,0,0,0.5);
+    margin-top: 90dvh;
+
+}
+
+/** ICONOS DEL NAV */
+.navbar svg {
+
+    cursor: pointer;
+    padding: 10px;
+    width: 30px;
+    
+
+}
+
+.navbar :hover {
+
+background-color: rgba(0,0,0,0.5)   ;
+border-radius: 20px;
+
+}
+
+/*! END ICONOS DEL NAV */
