@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 
-import { NavBar } from '../components/NavBar/NavBar'
 
 import { HOME_CARDS } from './Home.data'
 
@@ -9,33 +9,35 @@ import { Capitalize } from '../utils/string'
 import '../styles/pages/Home.css'
 
 const Home = () => {
-  
-  const [user,setUser] = useState('usuario')
-  
+
+  const [user, setUser] = useState('usuario')
+
   return (
     <>
-        <h4>Bienvenido, {Capitalize(user)}</h4>
-        
-        <div className="home">
-            {
+      <h4>Bienvenido, {Capitalize(user)}</h4>
 
-              HOME_CARDS.map((data)=>(
-                <div 
-                key={data.id}
-                 className="content-home"
-                  id={data.id}>
+      <div className="home">
+        {
 
-                  <h4>{data.title}</h4>
-                  <p>{data.subtitle}</p>
-                  
-                </div>
-              ))
+          HOME_CARDS.map((data) => (
+            <Link to={data.to} key={data.id}>
+              <div
 
-            }
-        </div>
-        
+                className="content-home"
+                id={data.id}>
+
+                <h4>{data.title}</h4>
+                <p>{data.subtitle}</p>
+
+              </div>
+            </Link>
+          ))
+
+        }
+      </div>
+
     </>
   )
 }
 
-export default Home ;
+export default Home;

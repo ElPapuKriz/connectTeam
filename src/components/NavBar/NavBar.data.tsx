@@ -20,7 +20,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'folder',
-    to:'/chatarea',
+    to:'/comunicadosoficiales',
     label: 'Files',
     viewBox: "0 0 16 16",
     pathsvg: (
@@ -29,7 +29,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'message',
-    to: '/comunicadosoficiales',
+    to: '/chatarea',
     label: 'Messages',
     viewBox: "0 0 24 24",
     pathsvg: (
@@ -38,7 +38,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'alert',
-    to:'/notasinstantaneas',
+    to:'/tareasrecordatorios',
     label: 'Alerts',
     viewBox: "0 0 1024 1024",
     
@@ -52,7 +52,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'location',
-    to:'/tareasrecordatorios',
+    to:'/perfil',
     label: 'Location',
     viewBox: "0 0 16 16",
     pathsvg: (

@@ -17,19 +17,24 @@ h4 {
     margin: 20px;
     overflow-y: auto;
     overflow-x: auto;
-
+    
 
 
     margin-bottom:106px;
 
 }
 
+.home a{text-decoration: none;}
+
 .content-home {
     cursor: pointer;
+    padding: 10px 0;
     margin: 10px;
     border-radius: 20px;
     width: var(--var-width-home);
     height: var(--var-height-home);
+    
+    
 
 }
 
@@ -43,6 +48,7 @@ h4 {
     text-align: center;
     padding: 10px;
     color: var(--var-color-letters);
+    
 }
 
 

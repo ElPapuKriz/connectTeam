@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router"
 
-import Home from "./pages/Home"
 import { MainLayout } from "./components/layouts/MainLayout"
 import { AuthLayout } from "./components/layouts/AuthLayout"
+
+import Home from "./pages/Home"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import Page404 from "./pages/Page404"
@@ -10,6 +11,7 @@ import ChatArea from "./pages/ChatArea"
 import ComunicadosOficiales from "./pages/ComunicadosOficiales"
 import NotasInstantaneas from "./pages/NotasInstantaneas"
 import TareasRecordatorios from "./pages/TareasRecordatorios"
+import Perfil from "./pages/Perfil"
 
 function App() {
 
@@ -20,11 +22,14 @@ function App() {
       {/* Rutas con Nav */}
 
       <Route element={<MainLayout />}>
+
         <Route path="/" element={<Home/>}/>
         <Route path="/chatarea" element={<ChatArea/>}/>
         <Route path="/comunicadosoficiales" element={<ComunicadosOficiales/>}/>
         <Route path="/notasinstantaneas" element={<NotasInstantaneas/>}/>
         <Route path="/tareasrecordatorios" element={<TareasRecordatorios/>}/>
+        <Route path="/perfil" element={<Perfil/>}/>
+        
       </Route>
 
       {/* Rutas sin Nav */}
