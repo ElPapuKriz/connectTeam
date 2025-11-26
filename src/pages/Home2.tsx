@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import '../styles/pages/Home.css'
+import { NavBar } from '../components/NavBar/NavBar'
 
-export const Home = () => {
+export const Home2 = () => {
 
     const [user,setUser] = useState('usuario')
 
@@ -14,6 +15,8 @@ export const Home = () => {
             <div className="content-home" id='chat_area'></div>
             <div className="content-home" id='tareas_recordatorios'></div>
         </div>
+        <NavBar/>
+
     </>
   )
 }

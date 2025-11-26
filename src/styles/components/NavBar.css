@@ -1,12 +1,28 @@
 .navbar {
 
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    border-top: 2px solid rgba(0,0,0,0.5);
-    margin-top: 90dvh;
+/* 1. Color y visuales base */
+  background-color: white;
+  border-top: 2px solid rgba(0, 0, 0, 0.2); /* Un borde más sutil */
+  
+  /* 2. Posicionamiento FIJO abajo */
+  position:sticky;  /* Se pega a la ventana, no al contenido */
+  bottom: 0;        /* Pegado al borde inferior */
+  left: 0;          /* Pegado al borde izquierdo */
+  width: 100%;      /* Ocupa todo el ancho */
+  z-index: 1000;    /* Asegura que flote sobre otros elementos */
+
+  /* 3. Distribución (Flexbox) */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* 'around' se ve mejor que 'between' en pantallas anchas */
+  padding: 15px 0;  /* Ajuste de padding vertical */
+  
+  /* Opcional: Sombras para que se distinga del fondo */
+  box-shadow: 0px -2px 10px rgba(0,0,0,0.3);
+
+  
+  
+    
 
 }
 

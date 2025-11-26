@@ -6,7 +6,6 @@ export const NavBar = () => {
 
 return (
     <>
-      <Home/>
       <IconsNavBar/>
     </>
   )

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { NAV_ITEMS } from './NavBar.data';
 
@@ -19,8 +19,9 @@ export const IconsNavBar = () => {
 
       {/* Nav bar */}
       {NAV_ITEMS.map((item) => (
-        
-        
+
+        <Link to={item.to}>
+
           <svg
             key={item.id}
             onMouseEnter={() => { setHoveredId(item.id) }}
@@ -30,9 +31,12 @@ export const IconsNavBar = () => {
             role="img"
             aria-label={item.label}
           >
-            {item.path}
+            {item.pathsvg}
           </svg>
-        
+
+        </Link>
+
+
 
       ))}
 

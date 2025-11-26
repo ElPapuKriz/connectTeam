@@ -1,10 +1,12 @@
-:root{
-    --var-width-home:250px;
-    --var-height-home:180px;
+:root {
+    --var-width-home: 250px;
+    --var-height-home: 180px;
+    --var-color-letters: rgba(0,0,0,0.8);
 }
 
-h4{
+h4 {
     text-align: center;
+    color: var(--var-color-letters);
 }
 
 .home {
@@ -12,45 +14,65 @@ h4{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin:20px;
+    margin: 20px;
+    overflow-y: auto;
+    overflow-x: auto;
 
 }
 
-.content-home{
+.content-home {
     cursor: pointer;
     margin: 10px;
     border-radius: 20px;
-    
+
 }
-.content-home:hover{
+
+.content-home:hover {
     scale: 1.1;
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    
+
 }
+
+.content-home p{
+    text-align: center;
+    padding: 10px;
+    color: var(--var-color-letters);
+}
+
+
+
+
 
 #comunicados_oficiales {
     background: #e76060;
     width: var(--var-width-home);
-    height: var(--var-height-home);
+    height: 500px   ;
 }
 
 #notas_instantaneas {
     background: #8ed665;
     width: var(--var-width-home);
     height: var(--var-height-home);
-    
+
 }
 
 #chat_area {
     background: #514fd8;
     width: var(--var-width-home);
     height: var(--var-height-home);
-    
+
 }
 
 #tareas_recordatorios {
     background: #60e7dc;
     width: var(--var-width-home);
     height: var(--var-height-home);
-    
+
+}
+
+@media (max-width:600px) {
+    .content-home{
+        width: 190px !important;
+        
+    }
 }
