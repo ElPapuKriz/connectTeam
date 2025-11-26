@@ -5,9 +5,11 @@
   border-top: 2px solid rgba(0, 0, 0, 0.2); /* Un borde más sutil */
   
   /* 2. Posicionamiento FIJO abajo */
-  position:sticky;  /* Se pega a la ventana, no al contenido */
-  bottom: 0;        /* Pegado al borde inferior */
-  left: 0;          /* Pegado al borde izquierdo */
+  position:fixed;  /* Se pega a la ventana, no al contenido */
+
+  bottom: 0;
+  left: 0;
+
   width: 100%;      /* Ocupa todo el ancho */
   z-index: 1000;    /* Asegura que flote sobre otros elementos */
 

@@ -1,6 +1,6 @@
 :root {
     --var-width-home: 250px;
-    --var-height-home: 180px;
+    --var-height-home: 200px;
     --var-color-letters: rgba(0,0,0,0.8);
 }
 
@@ -18,12 +18,18 @@ h4 {
     overflow-y: auto;
     overflow-x: auto;
 
+
+
+    margin-bottom:106px;
+
 }
 
 .content-home {
     cursor: pointer;
     margin: 10px;
     border-radius: 20px;
+    width: var(--var-width-home);
+    height: var(--var-height-home);
 
 }
 
@@ -45,28 +51,20 @@ h4 {
 
 #comunicados_oficiales {
     background: #e76060;
-    width: var(--var-width-home);
-    height: 500px   ;
 }
 
 #notas_instantaneas {
     background: #8ed665;
-    width: var(--var-width-home);
-    height: var(--var-height-home);
 
 }
 
 #chat_area {
     background: #514fd8;
-    width: var(--var-width-home);
-    height: var(--var-height-home);
 
 }
 
 #tareas_recordatorios {
     background: #60e7dc;
-    width: var(--var-width-home);
-    height: var(--var-height-home);
 
 }
 
