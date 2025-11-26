@@ -26,7 +26,7 @@ export const IconsNavBar = () => {
             key={item.id}
             onMouseEnter={() => { setHoveredId(item.id) }}
             onMouseLeave={() => { setHoveredId('') }}
-            fill={(hoveredId === item.id) ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0.5)'}
+            fill={(hoveredId === item.id) ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0,0,0,0.5)'}
             viewBox={item.viewBox}
             role="img"
             aria-label={item.label}

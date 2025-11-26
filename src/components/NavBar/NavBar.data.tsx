@@ -11,7 +11,7 @@ interface navItems {
 export const NAV_ITEMS:navItems[] = [
   {
     id: 'home',
-    to: '/home',
+    to: '/',
     label: 'Home',
     viewBox: "0 0 24 24",
     pathsvg: (
@@ -20,7 +20,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'folder',
-    to:'/',
+    to:'/chatarea',
     label: 'Files',
     viewBox: "0 0 16 16",
     pathsvg: (
@@ -29,7 +29,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'message',
-    to: '/home2',
+    to: '/comunicadosoficiales',
     label: 'Messages',
     viewBox: "0 0 24 24",
     pathsvg: (
@@ -38,7 +38,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'alert',
-    to:'/',
+    to:'/notasinstantaneas',
     label: 'Alerts',
     viewBox: "0 0 1024 1024",
     
@@ -52,7 +52,7 @@ export const NAV_ITEMS:navItems[] = [
   },
   {
     id: 'location',
-    to:'/',
+    to:'/tareasrecordatorios',
     label: 'Location',
     viewBox: "0 0 16 16",
     pathsvg: (
