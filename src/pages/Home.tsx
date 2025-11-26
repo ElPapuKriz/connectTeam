@@ -8,7 +8,7 @@ import { Capitalize } from '../utils/string'
 
 import '../styles/pages/Home.css'
 
-export const Home = () => {
+const Home = () => {
   
   const [user,setUser] = useState('usuario')
   
@@ -38,3 +38,4 @@ export const Home = () => {
   )
 }
 
+export default Home ;
