@@ -13,6 +13,8 @@ import NotasInstantaneas from "./pages/NotasInstantaneas"
 import TareasRecordatorios from "./pages/TareasRecordatorios"
 import Perfil from "./pages/Perfil"
 
+//Este es un comentario :v
+
 function App() {
 
   return (
