@@ -1,4 +1,11 @@
-export const COMUNICADOS_JEFE =[
+interface ComunicadosJefe {
+    title:string,
+    date:string,
+    msg:string
+}
+
+
+export const COMUNICADOS_JEFE:ComunicadosJefe[] =[
     {
         title:'Junta General - Viernes 10am',
         date:'22 Nov 2025',
