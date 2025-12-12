@@ -1,0 +1,234 @@
+/* styles/pages/NotasInstantaneas.css */
+
+/* ===== TÍTULOS ===== */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.5rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #718096;
+  margin: 0 0 1.5rem 0;
+}
+
+/* ===== SECCIÓN ENVIAR NOTAS ===== */
+.enviar-notas {
+  background: #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.enviar-notas input[type="text"] {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #2d3748;
+  background: white;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.enviar-notas input[type="text"]::placeholder {
+  color: #a0aec0;
+}
+
+.enviar-notas input[type="text"]:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+/* Contenedor de botones */
+.botones {
+  display: flex;
+  gap: 1rem;
+}
+
+.botones button {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botón Enviar a Todos (azul) */
+.botones button:first-child {
+  background: #4299e1;
+  color: white;
+}
+
+.botones button:first-child:hover {
+  background: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(66, 153, 225, 0.4);
+}
+
+/* Botón Enviar a mi Área (verde) */
+.botones button:last-child {
+  background: #48bb78;
+  color: white;
+}
+
+.botones button:last-child:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.4);
+}
+
+/* ===== NOTAS RECIENTES ===== */
+.notas-rápidas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+/* ===== CARD DE NOTA INDIVIDUAL ===== */
+.nota {
+  background: #e2e8f0;
+  border-left: 5px solid transparent;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Alternar colores del borde izquierdo */
+.notas-rápidas .nota:nth-child(odd) {
+  border-left-color: #4299e1;
+}
+
+.notas-rápidas .nota:nth-child(even) {
+  border-left-color: #48bb78;
+}
+
+.nota:hover {
+  background: #cbd5e0;
+  transform: translateX(4px);
+}
+
+/* Contenido del mensaje */
+.nota-contenido {
+  margin-bottom: 0.75rem;
+}
+
+.nota-contenido p {
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Especificaciones (hora, receptor, emisor) */
+.nota-especificaciones {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nota-tiempo,
+.nota-receptor,
+.nota-emisor {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+/* Iconos antes del texto */
+.nota-tiempo::before {
+  content: '🕐';
+  font-size: 1rem;
+}
+
+.nota-receptor::before {
+  content: '👥';
+  font-size: 1rem;
+}
+
+.nota-emisor::before {
+  content: 'Por:';
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .enviar-notas {
+    padding: 1.5rem;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .botones button {
+    width: 100%;
+  }
+
+  .nota-especificaciones {
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+  .enviar-notas {
+    padding: 1.25rem;
+  }
+
+  .enviar-notas input[type="text"] {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .botones button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .nota {
+    padding: 1rem;
+  }
+
+  .nota-contenido p {
+    font-size: 0.95rem;
+  }
+
+  .nota-especificaciones {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nota-tiempo,
+  .nota-receptor,
+  .nota-emisor {
+    font-size: 0.8rem;
+  }
+}

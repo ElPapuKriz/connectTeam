@@ -13,6 +13,7 @@ import NotasInstantaneas from "./pages/NotasInstantaneas"
 import TareasRecordatorios from "./pages/TareasRecordatorios"
 import Perfil from "./pages/Perfil"
 import PaginaPrueba from "./pages/Usuarios"
+import Menu from "./pages/Menu"
 
 //Este es un comentario :v
 
@@ -41,6 +42,7 @@ function App() {
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/menu" element={<Menu/>}/>
       </Route>
 
       <Route path="*" element={<Page404/>}/>

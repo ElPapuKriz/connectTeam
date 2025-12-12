@@ -1,5 +1,5 @@
 import { TAREAS_RECORDATORIOS as tareas } from "../data/TareasRecordatorios.data";
-
+import '../styles/pages/TareasRecordatorios.css'
 
 
 const TareasRecordatorios = () => {
@@ -15,7 +15,7 @@ const TareasRecordatorios = () => {
 
         <div className="contenedor-pendientes">
           {tareas.map(tarea => (
-            <div className="contenedor-msg">
+            <div className="contenedor-msg" key={tarea.titulo}>
               <div className="check">
                 <input type="checkbox" name="" id="" />
                 {tarea.titulo}

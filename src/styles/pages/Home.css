@@ -1,82 +1,163 @@
-:root {
-    --var-width-home: 250px;
-    --var-height-home: 200px;
-    --var-color-letters: rgba(0,0,0,0.8);
-}
+/* styles/pages/Home.css */
 
-.home h4 {
-    text-align: center;
-    color: var(--var-color-letters);
-}
-
+/* Contenedor principal */
 .home {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px;
-    overflow-y: auto;
-    overflow-x: auto;
-    
-
-
-    margin-bottom:106px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
 }
 
-.home a{text-decoration: none;}
+/* Saludo (el h4 antes del grid) */
+body > h4,
+#root > h4,
+.home-container > h4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
 
+/* Links - quitar estilos de enlace */
+.home a {
+  text-decoration: none;
+  display: block;
+}
+
+/* Cards individuales */
 .content-home {
-    cursor: pointer;
-    padding: 10px 0;
-    margin: 10px;
-    border-radius: 20px;
-    width: var(--var-width-home);
-    height: var(--var-height-home);
-    
-    
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colores alternados basados en nth-child */
+.home a:nth-child(1) .content-home {
+  background: linear-gradient(135deg, #68d391 0%, #48bb78 100%);
+  color: white;
+}
+
+.home a:nth-child(2) .content-home {
+  background: linear-gradient(135deg, #4299e1 0%, #2c5282 100%);
+  color: white;
+}
+
+.home a:nth-child(3) .content-home {
+  background: linear-gradient(135deg, #4299e1 0%, #2c5282 100%);
+  color: white;
+}
+
+.home a:nth-child(4) .content-home {
+  background: linear-gradient(135deg, #68d391 0%, #48bb78 100%);
+  color: white;
+}
+
+/* Hover effects */
+.home a:hover .content-home {
+  transform: scale(1.1);
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
 
 }
 
-.content-home:hover {
-    scale: 1.1;
-    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
+.home a:nth-child(odd):hover .content-home {
+  box-shadow: 0 12px 24px rgba(72, 187, 120, 0.3);
 }
 
-.content-home p{
-    text-align: center;
-    padding: 10px;
-    color: var(--var-color-letters);
-    
+.home a:nth-child(even):hover .content-home {
+  box-shadow: 0 12px 24px rgba(44, 82, 130, 0.3);
 }
 
-
-
-
-
-#comunicados_oficiales {
-    background: #e76060;
+/* Título de la card */
+.content-home h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
 }
 
-#notas_instantaneas {
-    background: #8ed665;
-
+/* Subtítulo de la card */
+.content-home p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
 }
 
-#chat_area {
-    background: #514fd8;
+/* ===== RESPONSIVE ===== */
 
+/* Tablets */
+@media (max-width: 1024px) {
+  .home {
+    padding: 0 1.5rem;
+  }
 }
 
-#tareas_recordatorios {
-    background: #60e7dc;
+/* Mobile */
+@media (max-width: 768px) {
+  body > h4,
+  #root > h4,
+  .home-container > h4 {
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
 
+  .home {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .content-home {
+    padding: 1.75rem 1.25rem;
+    min-height: 140px;
+  }
+
+  .content-home h4 {
+    font-size: 1.1rem;
+  }
+
+  .content-home p {
+    font-size: 0.9rem;
+  }
 }
 
-@media (max-width:600px) {
-    .content-home{
-        width: 190px !important;
-        
-    }
+/* Small mobile */
+@media (max-width: 480px) {
+  body > h4,
+  #root > h4,
+  .home-container > h4 {
+    padding: 1.25rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .home {
+    padding: 0 1rem;
+    gap: 0.875rem;
+  }
+
+  .content-home {
+    padding: 1.5rem 1rem;
+    min-height: 130px;
+  }
+
+  .content-home h4 {
+    font-size: 1rem;
+  }
+
+  .content-home p {
+    font-size: 0.85rem;
+  }
 }

@@ -1,0 +1,152 @@
+.contenedor-tareas {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.contenedor-IngresarTareas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contenedor-IngresarTareas h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.contenedor-IngresarTareas button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contenedor-IngresarTareas button:hover {
+  background-color: #1d4ed8;
+}
+
+.contenedor-tareas > div:nth-child(2) {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contenedor-pendientes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contenedor-msg {
+  background-color: #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.contenedor-msg:hover {
+  background-color: #d1d5db;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #9ca3af;
+  appearance: none;
+  background-color: white;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.check input[type="checkbox"]:checked {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.check input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contenedor-msg > div:nth-child(2) {
+  color: #6b7280;
+  font-size: 13px;
+  margin-left: 32px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 32px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.info > *:first-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info > *:first-child::before {
+  content: '📅';
+  font-size: 14px;
+}
+
+.info > *:last-child {
+  background-color: #2563eb;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Estilos para tareas completadas */
+.contenedor-msg.completado {
+  background-color: #f0fdf4;
+}
+
+.contenedor-msg.completado:hover {
+  background-color: #dcfce7;
+}
+
+.contenedor-msg.completado .check {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.contenedor-msg.completado .info > *:last-child {
+  background-color: #10b981;
+}

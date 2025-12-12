@@ -1,0 +1,84 @@
+/* styles/pages/ComunicadosOficiales.css */
+
+/* Títulos principales */
+
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.5rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #718096;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Contenedor principal de comunicados */
+.contenedor-comunicados {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  padding-bottom: 120px;
+}
+
+/* Card individual de mensaje */
+.contenedor-mensaje-jefe {
+  background: #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contenedor-mensaje-jefe:hover {
+  background: #cbd5e0;
+  transform: translateX(4px);
+}
+
+/* Flecha derecha */
+.contenedor-mensaje-jefe::after {
+  content: '>';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-comunicados {
+    gap: 0.875rem;
+  }
+
+  .contenedor-mensaje-jefe {
+    padding: 1.25rem;
+  }
+
+  .contenedor-mensaje-jefe::after {
+    right: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+}
