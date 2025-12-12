@@ -27,7 +27,7 @@ function App() {
 
       <Route element={<MainLayout />}>
 
-        <Route path="/" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/chatarea" element={<ChatArea/>}/>
         <Route path="/comunicadosoficiales" element={<ComunicadosOficiales/>}/>
         <Route path="/notasinstantaneas" element={<NotasInstantaneas/>}/>
@@ -42,7 +42,7 @@ function App() {
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path="/menu" element={<Menu/>}/>
+        <Route path="/" element={<Menu/>}/>
       </Route>
 
       <Route path="*" element={<Page404/>}/>

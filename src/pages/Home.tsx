@@ -13,7 +13,7 @@ const Home = () => {
   const [user, setUser] = useState('usuario')
 
   return (
-    <>
+    <div className='contenedor-home'>
       <h4>Bienvenido, {Capitalize(user)}</h4>
 
       <div className="home">
@@ -36,7 +36,7 @@ const Home = () => {
         }
       </div>
 
-    </>
+    </div>
   )
 }
 

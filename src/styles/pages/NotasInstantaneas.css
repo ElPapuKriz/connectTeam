@@ -232,3 +232,37 @@ h5 {
     font-size: 0.8rem;
   }
 }
+
+/* Estilos para botones deshabilitados */
+.botones button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Animación para notas nuevas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nota {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Destacar notas propias */
+.nota-emisor {
+  font-weight: bold;
+}
+
+/* Estilos para diferentes tipos de receptor */
+.nota-receptor {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}

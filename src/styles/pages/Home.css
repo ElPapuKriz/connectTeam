@@ -12,13 +12,17 @@
 
 }
 
+.contenedor-home{
+
+  margin:0 20%;
+
+}
+
 /* Saludo (el h4 antes del grid) */
 body > h4,
 #root > h4,
 .home-container > h4 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 2rem 1rem 2rem;
+
   font-size: 1.25rem;
   font-weight: 600;
   color: #2d3748;
@@ -66,7 +70,7 @@ body > h4,
 
 /* Hover effects */
 .home a:hover .content-home {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
 
 }

@@ -11,7 +11,7 @@ interface navItems {
 export const NAV_ITEMS:navItems[] = [
   {
     id: 'home',
-    to: '/',
+    to: '/home',
     label: 'Home',
     viewBox: "0 0 24 24",
     pathsvg: (

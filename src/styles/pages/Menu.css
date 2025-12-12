@@ -1,13 +1,30 @@
 /* styles/Menu.css */
-
+*{
+  padding: 0;
+  margin: 0;
+}
 .menu-container {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 2rem;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow: hidden; /* importante para que no se salga el blur */
+}
+
+.menu-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('logo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(100px); /* <-- aquí SÍ funciona */
+  z-index: -1;
 }
 
 .menu-content {

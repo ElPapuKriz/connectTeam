@@ -15,7 +15,7 @@ const Login = () => {
     console.log('Login:', { email, password })
     
     // Simular login exitoso
-    navigate('/')
+    navigate('/home')
   }
 
   return (
@@ -24,7 +24,7 @@ const Login = () => {
         {/* Logo */}
         <div className="login-logo">
           <img 
-            src="/logo.svg" 
+            src="/logo.jpg" 
             alt="ConnectTeam Logo" 
             className="logo-image"
           />

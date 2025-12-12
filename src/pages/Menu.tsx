@@ -9,7 +9,7 @@ const Menu = () => {
         {/* Logo */}
         <div className="menu-logo">
           <img 
-            src="/logo.svg" 
+            src="/logo.jpg" 
             alt="ConnectTeam Logo" 
             className="logo-image"
           />

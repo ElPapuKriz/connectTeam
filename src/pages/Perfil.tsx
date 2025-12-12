@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import './../styles/pages/Perfil.css'
 
 const Perfil = () => {
@@ -11,9 +12,9 @@ const Perfil = () => {
       <div className="profile-card">
         <div className="avatar-section">
           <div className="avatar">
-            <span className="avatar-letter">U</span>
+            <span className="avatar-letter">C</span>
           </div>
-          <p className="avatar-name">Usuario Demo</p>
+          <p className="avatar-name">Christopher Pazo</p>
         </div>
 
         <div className="info-section">
@@ -24,7 +25,7 @@ const Perfil = () => {
               </svg>
               <span>Nombre completo</span>
             </div>
-            <p className="info-value">Usuario Demo</p>
+            <p className="info-value">Christopher Pazo</p>
           </div>
 
           <div className="info-item">
@@ -44,7 +45,7 @@ const Perfil = () => {
               </svg>
               <span>Correo institucional</span>
             </div>
-            <p className="info-value">a@a</p>
+            <p className="info-value">a.christopherpazo@seoane.edu.pe</p>
           </div>
         </div>
 
@@ -55,12 +56,16 @@ const Perfil = () => {
           Editar Perfil
         </button>
 
-        <button className="btn-logout">
+        <Link to={'/'} className="btn-logout">
           <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
           </svg>
           Cerrar Sesión
-        </button>
+
+        </Link>
+
+
+
       </div>
 
       <div className="stats-section">

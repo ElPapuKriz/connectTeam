@@ -1,13 +1,51 @@
+import { useState } from 'react';
 import { CHAT_AREA as chats } from "../data/ChatArea.data";
 import '../styles/pages/ChatArea.css'
 
 const ChatArea = () => {
+  const [mensajes, setMensajes] = useState(chats);
+  const [nuevoMensaje, setNuevoMensaje] = useState('');
+  const [areaSeleccionada, setAreaSeleccionada] = useState('Estadística');
+
+  const obtenerHoraActual = () => {
+    const ahora = new Date();
+    const horas = ahora.getHours().toString().padStart(2, '0');
+    const minutos = ahora.getMinutes().toString().padStart(2, '0');
+    return `${horas}:${minutos}`;
+  };
+
+  const enviarMensaje = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (nuevoMensaje.trim() === '') {
+      return;
+    }
+
+    const mensajeNuevo = {
+      emisor: 'Yo',
+      msg: nuevoMensaje,
+      hora: obtenerHoraActual(),
+      area: areaSeleccionada
+    };
+
+    setMensajes(prev => [...prev, mensajeNuevo]);
+    setNuevoMensaje('');
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      enviarMensaje(e);
+    }
+  };
+
   return (
     <>
       <div className="contenedor-chatArea">
         {/* Header */}
         <div className="chat-header">
-          <div className="chat-logo">💬</div>
+          <div className="chat-logo">
+            <img src="logo.jpg" alt="logo" width={'50px'} />
+          </div>
           <div className="chat-title">
             <h2>
               <span className="connect">Connect</span>
@@ -20,19 +58,22 @@ const ChatArea = () => {
         {/* Filtro de área */}
         <div className="filtrarChats">
           <label>Selecciona tu área</label>
-          <select>
-            <option value="">Estadística</option>
-            <option value="">Producción</option>
-            <option value="">Administración</option>
-            <option value="">Contabilidad</option>
-            <option value="">Logística</option>
-            <option value="">Recursos humanos</option>
+          <select 
+            value={areaSeleccionada}
+            onChange={(e) => setAreaSeleccionada(e.target.value)}
+          >
+            <option value="Estadística">Estadística</option>
+            <option value="Producción">Producción</option>
+            <option value="Administración">Administración</option>
+            <option value="Contabilidad">Contabilidad</option>
+            <option value="Logística">Logística</option>
+            <option value="Recursos humanos">Recursos humanos</option>
           </select>
         </div>
 
         {/* Área de chat */}
         <div className="chatArea">
-          {chats.map((chat, index) => (
+          {mensajes.map((chat, index) => (
             <div 
               key={index} 
               className={`contenedor-mensaje ${chat.emisor === 'Yo' ? 'derecha' : 'izquierda'}`}
@@ -46,8 +87,16 @@ const ChatArea = () => {
 
         {/* Input */}
         <div className="contenedor-input-msg">
-          <input type="text" placeholder="Escribe un mensaje......"/>
-          <button type="button">✈️</button>
+          <form onSubmit={enviarMensaje} style={{ display: 'flex', width: '100%' }}>
+            <input 
+              type="text" 
+              placeholder="Escribe un mensaje......"
+              value={nuevoMensaje}
+              onChange={(e) => setNuevoMensaje(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
+            <button type="submit">✔</button>
+          </form>
         </div>
       </div>
     </>
