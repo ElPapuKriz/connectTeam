@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CHAT_AREA as chats } from "../data/ChatArea.data";
 import '../styles/pages/ChatArea.css'
-
+//comentario :v
 const ChatArea = () => {
   const [mensajes, setMensajes] = useState(chats);
   const [nuevoMensaje, setNuevoMensaje] = useState('');
