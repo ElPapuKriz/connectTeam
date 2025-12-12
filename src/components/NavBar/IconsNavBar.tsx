@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { NAV_ITEMS } from './NavBar.data';
 
-import '../../styles/components/NavBar.css';
-
-
-
+import '@/styles/components/NavBar.css';
 
 
 export const IconsNavBar = () => {

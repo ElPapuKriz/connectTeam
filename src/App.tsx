@@ -12,6 +12,7 @@ import ComunicadosOficiales from "./pages/ComunicadosOficiales"
 import NotasInstantaneas from "./pages/NotasInstantaneas"
 import TareasRecordatorios from "./pages/TareasRecordatorios"
 import Perfil from "./pages/Perfil"
+import PaginaPrueba from "./pages/Usuarios"
 
 //Este es un comentario :v
 
@@ -31,8 +32,9 @@ function App() {
         <Route path="/notasinstantaneas" element={<NotasInstantaneas/>}/>
         <Route path="/tareasrecordatorios" element={<TareasRecordatorios/>}/>
         <Route path="/perfil" element={<Perfil/>}/>
-        
+        <Route path="/prueba" element={<PaginaPrueba/>}/>
       </Route>
+        
 
       {/* Rutas sin Nav */}
 

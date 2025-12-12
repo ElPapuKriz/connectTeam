@@ -1,4 +1,4 @@
-import { COMUNICADOS_JEFE as com } from "../data/ComunicadosOficiales.data";
+import { COMUNICADOS_JEFE as com } from "@/data/ComunicadosOficiales.data";
 
 const ComunicadosOficiales = () => {
   return (
